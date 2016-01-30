@@ -1,0 +1,96 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="theme.css">
+  <link rel=""
+</head>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">THANKZ</h4>
+      </div>
+      <div class="modal-body">
+        Student saved successfully!
+      </div>
+      <div class="modal-footer">
+        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+<div id="first">  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap-validator-master/js/validator.js"></script>
+    <script src="app.js"></script>
+    <div class="form-container">
+      <form data-toggle="validator" role="form" id="form">
+          <div class="form-group col-xs-6">
+            <label for="firstName">First Name</label>
+            <div class="input-group col-xs-12">
+              <input type="text" class="form-control" id="firstNameInput" placeholder="Jane" required>
+              <span class="glyphicon form-control-feedback" aria-hidden="true" id="erroricon"></span>
+            </div>
+          </div>
+          <div class="form-group col-xs-6">
+            <label for="lastName">Last Name</label>
+            <div class="input-group col-xs-12">
+              <input type="text" class="form-control" id="lastNameInput" placeholder="Doe" required>
+              <span class="glyphicon form-control-feedback" aria-hidden="true" id="erroricon"></span>
+            </div>
+          </div>
+        <div class="form-group col-xs-12">
+            <label for="exampleInputEmail2">Email</label>
+            <div class="input-group col-xs-12">
+              <input type="email" class="form-control" id="emailInput" placeholder="Email" required>
+              <span class="glyphicon form-control-feedback" aria-hidden="true" id="erroricon"></span>
+            </div>
+        </div>
+        <div class="form-group col-xs-12">
+          <label for="exam">Exam</label>
+          <div class="input-group col-xs-12">
+            <input type="text" class="form-control" id="exam" placeholder="Systemvetenskap" required="">
+            <span class="glyphicon form-control-feedback" aria-hidden="true" id="erroricon"></span>
+          </div>
+        </div>
+        <div class="form-group col-xs-12">
+          <label for="graduationYear">Year of graduation</label>
+          <div class="select-container">
+            <select class="form-control">
+              <option disabled selected>-Select year of graduation-</option>
+              <option>2015</option>
+              <option>2016</option>
+              <option>2017</option>
+              <option>2018</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group col-xs-12">
+          <label for="graduationYear">City of interest</label>
+          <div class="select-container">
+            <select class="form-control">
+              <option disabled selected>-Select city of interest-</option>
+              <option>Malmö</option>
+              <option>Stockholm</option>
+              <option>Göteborg</option>
+              <option>Linköping</option>
+              <option>Boden</option>
+            </select>
+          </div>
+        </div>
+        <div class="subbtm col-xs-12">
+<button type="submit" class="btn btn-primary btn-block"> Submit!</button>
+        </div>
+      </form>
+    </div>
+</body>
+</html>
