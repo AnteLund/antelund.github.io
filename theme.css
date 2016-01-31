@@ -7,6 +7,22 @@
   transform: translate(-50%, -50%);
 }
 
+input#firstNameInput{
+  border-radius: 5px;
+}
+
+input#lastNameInput{
+  border-radius: 5px;
+}
+
+input#emailinput{
+  border-radius: 5px;
+}
+
+input#examInput{
+  border-radius: 5px;
+}
+
 .subbtm{
   margin-top: 20px;
 }
