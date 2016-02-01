@@ -20,19 +20,19 @@
           <div class="form-group col-xs-6">
             <label for="firstName">First Name</label>
             <div class="input-group col-xs-12" id="firstName">
-              <input type="text" ng-model="city.cityName" class="form-control text-input" id="firstNameInput" placeholder="Jane" required>
+              <input type="text" ng-model="firstName" class="form-control text-input" id="firstNameInput" placeholder="Jane" required>
             </div>
           </div>
           <div class="form-group col-xs-6">
             <label for="lastName">Last Name</label>
             <div class="input-group col-xs-12">
-              <input type="text" class="form-control" ng-focus="addStudent()" id="lastNameInput" placeholder="Doe" required>
+              <input type="text" class="form-control" ng-model="lastName" id="lastNameInput" placeholder="Doe" required>
             </div>
           </div>
         <div class="form-group col-xs-12">
             <label for="exampleInputEmail2">Email</label>
             <div class="input-group col-xs-12">
-              <input type="email" class="form-control" id="emailInput" placeholder="Email" required>
+              <input type="email" class="form-control" ng-model="email" id="emailInput" placeholder="Email" required>
             </div>
         </div>
         <div class="form-group col-xs-12">
@@ -44,26 +44,21 @@
         <div class="form-group col-xs-12">
           <label for="graduationYear">Year of graduation</label>
           <div class="select-container">
-            <select class="form-control">
-              <option disabled selected>-Select year of graduation-</option>
-              <option>2015</option>
-              <option>2016</option>
-              <option>2017</option>
-              <option>2018</option>
+            <select class="form-control" ng-model="yearOfGraduation">
+              <option disabled selected value = 'reset'> -Select year of graduation-</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
             </select>
           </div>
         </div>
         <div class="form-group col-xs-12">
           <label for="graduationYear">City of interest</label>
           <div class="select-container">
-            <select class="form-control">
-              <option disabled selected>-Select city of interest-</option>
-              <option>Malmö</option>
-              <option>Stockholm</option>
-              <option>Göteborg</option>
-              <option>Linköping</option>
-              <option>Boden</option>
-              <option ng-repeat="city in cities">"{{city.cityName}}</option>
+            <select ng-model ="cityOfInterest" class="form-control">
+              <option disabled selected value='reset'>-Select city of interest-</option>
+              <option ng-repeat="city in cities">{{city.cityName}}</option>
             </select>
           </div>
         </div>

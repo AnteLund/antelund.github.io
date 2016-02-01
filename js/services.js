@@ -1,20 +1,19 @@
-hsgApp.factory('StudentService', function($http) {
+hsgApp.factory('studentService', function($http) {
   var studentService = {};
 
   studentService.getCities = function(callback) {
-    $http.get('http://localhost:8080/api/cities').then(function(response) {
-      console.log(response);
-      console.log()
-      return(response);
+    return $http.get('http://localhost:8080/api/cities').then(function(response) {
+      return response.data;
     });
-    //return [
-    //  {
-    //    firstName: 'Jonathan',
-    //    lastName: 'Lindvall',
-    //    email: 'jonatan.lindvall@capgemini.com'
-    //  }
-    //];
- };
+  };
+
+  studentService.createStudent = function(data){
+    return $http.post('http://localhost:8080/api/student',data).success(function(data,status,headers){
+      console.log("Task Added");
+      return status;
+    })
+  }
+
 
  return studentService;
 });

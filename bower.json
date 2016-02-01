@@ -1,0 +1,12 @@
+{
+  "name": "angular-seed",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "",
+  "license": "",
+  "private": true,
+  "dependencies": {
+    "angular-resource": "1.5.0",
+    "angular-route": "1.4.x"
+  }
+}
