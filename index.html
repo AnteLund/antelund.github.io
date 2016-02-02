@@ -38,32 +38,23 @@
         <div class="form-group col-xs-12">
           <label for="exam">Exam</label>
           <div class="input-group col-xs-12">
-            <input type="text" class="form-control" id="examInput" placeholder="Systemvetenskap" >
+            <input type="text" class="form-control" ng-model="exam" id="examInput" placeholder="Systemvetenskap" >
           </div>
         </div>
+
         <div class="form-group col-xs-12">
-          <label for="graduationYear">Year of graduation</label>
-          <div class="select-container">
-            <select class="form-control" ng-model="yearOfGraduation">
-              <option disabled selected value = 'reset'> -Select year of graduation-</option>
-              <option value="2015">2015</option>
-              <option value="2016">2016</option>
-              <option value="2017">2017</option>
-              <option value="2018">2018</option>
-            </select>
+          <div>
+            <label for="graduationYear">City of interest</label>
           </div>
-        </div>
-        <div class="form-group col-xs-12">
-          <label for="graduationYear">City of interest</label>
-          <div class="select-container">
-            <select ng-model ="cityOfInterest" class="form-control">
-              <option disabled selected value='reset'>-Select city of interest-</option>
-              <option ng-repeat="city in cities">{{city.cityName}}</option>
-            </select>
+          <div class="funkyradio col-xs-4" ng-repeat="city in cities">
+            <div class="funkyradio-primary">
+              <input type="checkbox" name="checkbox" id="{{city.cityName}}" ng-model="city.selected" ng-change="onMaChange()"/>
+              <label for="{{city.cityName}}">{{city.cityName}}</label>
+            </div>
           </div>
         </div>
         <div class="subbtm col-xs-12">
-<button type="submit" class="btn btn-primary btn-block"> Submit!</button>
+          <button type="submit" class="btn btn-primary btn-block"> Submit!</button>
         </div>
       </form>
     </div>
