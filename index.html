@@ -14,19 +14,18 @@
 </head>
 <body ng-app="hsgApp" ng-controller="StudentCreateController">
 <div id="first">  </div>
-
     <div class="form-container">
       <form  name="studentForm" ng-submit="addStudent()">
           <div class="form-group col-xs-6">
             <label for="firstName">First Name</label>
             <div class="input-group col-xs-12" id="firstName">
-              <input type="text" ng-model="firstName" class="form-control text-input" id="firstNameInput" placeholder="Jane" required>
+              <input type="text" ng-model="firstName" class="form-control text-input" id="firstNameInput" placeholder="First name" required>
             </div>
           </div>
           <div class="form-group col-xs-6">
             <label for="lastName">Last Name</label>
             <div class="input-group col-xs-12">
-              <input type="text" class="form-control" ng-model="lastName" id="lastNameInput" placeholder="Doe" required>
+              <input type="text" class="form-control" ng-model="lastName" id="lastNameInput" placeholder="Last name" required>
             </div>
           </div>
         <div class="form-group col-xs-12">
@@ -35,21 +34,40 @@
               <input type="email" class="form-control" ng-model="email" id="emailInput" placeholder="Email" required>
             </div>
         </div>
-        <div class="form-group col-xs-12">
-          <label for="exam">Exam</label>
+        <div class="form-group col-xs-6">
+          <label for="exam">Academic degree</label>
           <div class="input-group col-xs-12">
-            <input type="text" class="form-control" ng-model="exam" id="examInput" placeholder="Systemvetenskap" >
+            <input type="text" class="form-control" ng-model="exam" id="examInput" placeholder="Academic degree" >
           </div>
         </div>
 
-        <div class="form-group col-xs-12">
-          <div>
-            <label for="graduationYear">City of interest</label>
+        <div class="form-group col-xs-6">
+          <label for="sel1">Year of graduation</label>
+           <select class="form-control" id="yearOfGraduation">
+             <option>2016</option>
+             <option>2017</option>
+             <option>2018</option>
+             <option>2019</option>
+             <option>2020</option>
+           </select>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <label for="cityOfInterest">City of interest</label>
           </div>
-          <div class="funkyradio col-xs-4" ng-repeat="city in cities">
+          <div class="funkyradio {{cityRowBuilder}}" ng-repeat="city in cities">
             <div class="funkyradio-primary">
               <input type="checkbox" name="checkbox" id="{{city.cityName}}" ng-model="city.selected" ng-change="onMaChange()"/>
               <label for="{{city.cityName}}">{{city.cityName}}</label>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <label for="cityOfInterest">Role of interest</label>
+          </div>
+          <div class="funkyradio {{rolesRowBuilder}}" ng-repeat="role in roles">
+            <div class="funkyradio-primary">
+              <input type="checkbox" name="checkbox" id="{{role.roleName}}" ng-model="city.selected" ng-change="onMaChange()"/>
+              <label for="{{role.roleName}}">{{role.roleName}}</label>
             </div>
           </div>
         </div>

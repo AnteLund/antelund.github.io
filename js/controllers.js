@@ -8,17 +8,35 @@ hsgApp.controller('StudentCreateController', function($scope,$filter,studentServ
         value.selected = "false";
       })
       $scope.cities = allCitites;
+      $scope.cityRowBuilder = ""
+      if(allCitites.length%3==0){
+        $scope.cityRowBuilder ="col-xs-4";
+        console.log(allCitites.length%3)
+      }
+      if(allCitites.length%4==0){
+        console.log(allCitites.length%4);
+        $scope.cityRowBuilder = "col-xs-3";
+      }
 		});
 	};
   getCities();
 
+  var getRoles = function(){
+    studentService.getRoles().then(function(allRoles){
+      angular.forEach(allRoles, function(value,key){
+        value.selected = "false";
+      })
+      $scope.roles = allRoles;
+      $scope.rolesRowBuilder = "col-xs-4";
+    });
+  };
 	$scope.addStudent = function() {
 		studentService.createStudent(buildStudent()).then(function(response){
 			console.log(response);
       resetForm();
 		});
 	};
-
+  getRoles();
   var buildStudent = function(){
     var selectedCities = $filter('filter')($scope.cities, {selected:'true'});
     var student = {

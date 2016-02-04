@@ -24,6 +24,7 @@ input#examInput{
 }
 
 .subbtm{
+  margin-top: 10px;
 }
 div#first{
   background-image: url('CapGemini-TurningTorso.jpg');
