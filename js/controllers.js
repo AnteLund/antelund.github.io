@@ -11,12 +11,13 @@ hsgApp.controller('StudentCreateController', function($scope,$filter,studentServ
       $scope.cityRowBuilder = ""
       if(allCitites.length%3==0){
         $scope.cityRowBuilder ="col-xs-4";
-        console.log(allCitites.length%3)
       }
       if(allCitites.length%4==0){
-        console.log(allCitites.length%4);
         $scope.cityRowBuilder = "col-xs-3";
       }
+			if(allCitites.length%5==0){
+				$scope.cityRowBuilder = "col-xs-3";
+			}
 		});
 	};
   getCities();

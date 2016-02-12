@@ -12,14 +12,12 @@ hsgApp.factory('studentService', function($http) {
       return response.data;
     });
   };
-
-  studentService.createStudent = function(data){
-    return $http.post('http://localhost:8080/api/student',data).success(function(data,status,headers){
-      console.log("Task Added");
-      return status;
+  studentService.createStudent = function(student) {
+    return $http.post('http://localhost:8080/api/students',student).then(function(data,status,headers)
+    {
+        console.log("Student Added");
+        return data;
     })
   }
-
-
  return studentService;
 });
