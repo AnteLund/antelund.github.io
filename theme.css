@@ -1,8 +1,21 @@
+body {
+  background: #2098c0;
+}
+.logo {
+  text-align: center;
+  padding: 50px;
+}
+.btn-primary {
+  background-color: #2098c0;
+}
 .form-container{
+  background: #fff;
+  padding: 15px 15px 30px 15px;
+  border-radius: 4px;
   margin: 0 auto;
   width: 50%;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -28,9 +41,11 @@ input#examInput{
 }
 div#first{
   background-image: url('CapGemini-TurningTorso.jpg');
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity:0.4;
+  opacity:0.1;
   height: 100%;
   width: 100%;
   overflow: auto;
