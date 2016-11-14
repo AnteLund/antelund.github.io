@@ -3,7 +3,7 @@ body {
 }
 .logo {
   text-align: center;
-  padding: 50px;
+  padding: 40px;
 }
 .btn-primary {
   background-color: #2098c0;
@@ -13,9 +13,9 @@ body {
   padding: 15px 15px 30px 15px;
   border-radius: 4px;
   margin: 0 auto;
-  width: 50%;
+  width: 75%;
   position: absolute;
-  top: 55%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -35,7 +35,7 @@ input#emailinput{
 input#examInput{
   border-radius: 5px;
 }
-
+.smaller { font-size: 12px; }
 .subbtm{
   margin-top: 10px;
 }
@@ -91,7 +91,7 @@ div#first{
   content: '';
   width: 2.5em;
   background: #D1D3D4;
-  border-radius: 5px 0 0 5px;
+  border-radius: 4px;
 }
 
 .funkyradio input[type="radio"]:hover:not(:checked) ~ label,
@@ -123,5 +123,5 @@ div#first{
 
 .funkyradio-primary input[type="checkbox"]:checked ~ label:before {
   color: #fff;
-  background-color: #337ab7;
+  background-color: #2098c0;
 }
